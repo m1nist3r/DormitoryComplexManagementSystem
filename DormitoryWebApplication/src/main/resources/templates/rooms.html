@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" layout:decorate="~{fragments/main_layout}" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resident List</title>
+</head>
+<body>
+<div class="container" layout:fragment="content" role="main">
+    <div class="d-flex justify-content-between mb-2 mt-3">
+        <div>
+            <p class="h2">List of Residents</p>
+        </div>
+        <div>
+            <form action="#" class="form-inline my-2 my-lg-0 ml-10" method="get" th:action="@{/rooms}">
+                <input aria-label="Search" class="form-control mr-sm-2" name="searched" placeholder="Search"
+                       type="search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Room Type</th>
+                <th scope="col">Dormitory Number</th>
+                <th scope="col">Room Status</th>
+                <th scope="col">Resident Amount</th>
+                <th scope="col">Floor</th>
+                <th scope="col">Remarks</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="room : ${roomPage.content}">
+                <th scope="row"><a th:href="@{'/rooms/' + ${room.id}}" th:text="${room.id}"></a></th>
+                <td th:text="${room.roomType}"></td>
+                <td th:text="${room.dormNum}"></td>
+                <td th:text="${room.roomStatus}"></td>
+                <td th:text="${room.resAmount}"></td>
+                <td th:text="${room.floor}"></td>
+                <td th:text="${room.remarks}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="resident navigation" class="mt-2" th:if="${roomPage.totalPages > 1}">
+        <ul class="pagination justify-content-center pagination-lg">
+            <li th:class="${currentPage == 1} ? 'page-item disabled' : 'page-item'">
+                <a class="page-link" th:href="@{/rooms(size=${roomPage.size}, page=${currentPage-1})}"
+                   th:tabindex="${currentPage == 1} ? '-1'">Previous</a>
+            </li>
+            <li th:class="${pageNumber==roomPage.number + 1} ? 'page-item active'"
+                th:each="pageNumber : ${pageNumbers} ">
+                <a class="page-link" th:href="@{/rooms(size=${roomPage.size}, page=${pageNumber})}"
+                   th:if="${pageNumber!=roomPage.number + 1}"
+                   th:text="${pageNumber}"></a>
+                <span class="page-link" th:text="${pageNumber}"
+                      th:unless="${pageNumber!=roomPage.number + 1}"><span
+                        class="sr-only">(current)</span></span>
+            </li>
+            <li th:class="${currentPage == pageNumbers.size()} ? 'page-item disabled' : 'page-item'">
+                <a class="page-link" th:href="@{/rooms(size=${roomPage.size}, page=${currentPage+1})}"
+                   th:tabindex="${currentPage == 1} ? '-1'">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

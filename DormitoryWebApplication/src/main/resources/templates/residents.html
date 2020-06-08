@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" layout:decorate="~{fragments/main_layout}" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resident List</title>
+</head>
+<body>
+<div class="container" layout:fragment="content" role="main">
+    <div class="d-flex justify-content-between mb-2 mt-3">
+        <div>
+            <p class="h2">List of Residents</p>
+        </div>
+        <div>
+            <a aria-pressed="true" class="btn btn-primary btn-lg active" href="/residents/add" role="button"
+               th:href="@{/residents/add}">Add Resident</a>
+        </div>
+        <div>
+            <form action="#" class="form-inline my-2 my-lg-0 ml-10" method="get" th:action="@{/residents}">
+                <input aria-label="Search" class="form-control mr-sm-2" name="searched" placeholder="Search"
+                       type="search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">PESEL</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Room Number</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Mothers Name</th>
+                <th scope="col">Fathers Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Country</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Accommodation Date</th>
+                <th scope="col">Eviction Date</th>
+                <th scope="col">Payment Fee</th>
+                <th scope="col">Resident Type</th>
+                <th scope="col">Restricted</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="resident, iStat : ${residentPage.content}">
+                <th scope="row"><a th:href="@{'/residents/' + ${resident.id}}" th:text="${resident.id}"></a></th>
+                <td th:text="${resident.firstName}"></td>
+                <td th:text="${resident.lastName}"></td>
+                <td th:text="${resident.pesel}"></td>
+                <td th:text="${resident.gender}"></td>
+                <td th:text="${resident.room.id}"></td>
+                <td th:text="${resident.getFormattedDate(resident.dateDOB)}"></td>
+                <td th:text="${resident.mothersName}"></td>
+                <td th:text="${resident.fathersName}"></td>
+                <td th:text="${resident.email}"></td>
+                <td th:text="${resident.country}"></td>
+                <td th:text="${resident.address}"></td>
+                <td th:text="${resident.phoneNumber}"></td>
+                <td th:text="${resident.getFormattedDate(resident.accommodationDate)}"></td>
+                <td th:text="${resident.getFormattedDate(resident.evictionDate)}"></td>
+                <td th:text="${resident.paymentFee}"></td>
+                <td th:text="${resident.residentType.type}"></td>
+                <td th:text="${resident.isBlocked}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="resident navigation" class="mt-2" th:if="${residentPage.totalPages > 1}">
+        <ul class="pagination justify-content-center pagination-lg">
+            <li th:class="${currentPage == 1} ? 'page-item disabled' : 'page-item'">
+                <a class="page-link" th:href="@{/residents(size=${residentPage.size}, page=${currentPage-1})}"
+                   th:tabindex="${currentPage == 1} ? '-1'">Previous</a>
+            </li>
+            <li th:class="${pageNumber==residentPage.number + 1} ? 'page-item active'"
+                th:each="pageNumber : ${pageNumbers} ">
+                <a class="page-link" th:href="@{/residents(size=${residentPage.size}, page=${pageNumber})}"
+                   th:if="${pageNumber!=residentPage.number + 1}"
+                   th:text="${pageNumber}"></a>
+                <span class="page-link" th:text="${pageNumber}"
+                      th:unless="${pageNumber!=residentPage.number + 1}"><span
+                        class="sr-only">(current)</span></span>
+            </li>
+            <li th:class="${currentPage == pageNumbers.size()} ? 'page-item disabled' : 'page-item'">
+                <a class="page-link" th:href="@{/residents(size=${residentPage.size}, page=${currentPage+1})}"
+                   th:tabindex="${currentPage == 1} ? '-1'">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" layout:decorate="~{fragments/main_layout}" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resident List</title>
+</head>
+<body>
+<div class="container" layout:fragment="content" role="main">
+
+    <div class="table-responsive mb-2 mt-3">
+        <table class="table table-hover table-striped">
+            <tr>
+                <th scope="row">#</th>
+                <td th:text="${room.id}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Room Type</th>
+                <td th:text="${room.roomType}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Dormitory Number</th>
+                <td th:text="${room.dormNum}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Room Status</th>
+                <td th:text="${room.roomStatus}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Resident Amount</th>
+                <td th:text="${room.resAmount}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Floor</th>
+                <td th:text="${room.floor}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Remarks</th>
+                <td th:text="${room.remarks}"></td>
+            </tr>
+
+            <tr>
+                <th scope="row">Residents:</th>
+                <td><a th:each="roomRes, index : ${room.residentList}" th:href="@{'/residents/' + ${roomRes.id}}"
+                       th:text="${room.residentList.size() >= index.index + 2} ?
+                        ${roomRes.firstName + ' ' + roomRes.lastName + ', '}
+                        : ${roomRes.firstName + ' ' + roomRes.lastName}"></a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p><a href="/rooms" th:href="@{/rooms}">Back to list of rooms</a></p>
+    </div>
+</div>
+</body>
+</html>

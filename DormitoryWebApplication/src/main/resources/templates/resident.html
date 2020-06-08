@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" layout:decorate="~{fragments/main_layout}" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resident List</title>
+</head>
+<body>
+<div class="container" layout:fragment="content" role="main">
+
+    <div class="table-responsive mb-2 mt-3">
+        <table class="table table-hover table-striped">
+            <tr>
+                <th scope="row">#</th>
+                <td th:text="${resident.id}"></td>
+            </tr>
+            <tr>
+                <th scope="row">First Name</th>
+                <td th:text="${resident.firstName}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Last Name</th>
+                <td th:text="${resident.lastName}"></td>
+            </tr>
+            <tr>
+                <th scope="row">PESEL</th>
+                <td th:text="${resident.pesel}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Gender</th>
+                <td th:text="${resident.gender}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Room Number</th>
+                <td><a th:text="${resident.room.id}" th:href="@{'/rooms/' + ${resident.room.id}}"></a></td>
+            </tr>
+            <tr>
+                <th scope="row">Date of Birth</th>
+                <td th:text="${resident.getFormattedDate(resident.dateDOB).toString()}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Mothers Name</th>
+                <td th:text="${resident.mothersName}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Fathers Name</th>
+                <td th:text="${resident.fathersName}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Email</th>
+                <td th:text="${resident.email}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Country</th>
+                <td th:text="${resident.country}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Address</th>
+                <td th:text="${resident.address}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Phone Number</th>
+                <td th:text="${resident.phoneNumber}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Accommodation Date</th>
+                <td th:text="${resident.getFormattedDate(resident.accommodationDate)}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Eviction Date</th>
+                <td th:text="${resident.getFormattedDate(resident.evictionDate)}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Payment Fee</th>
+                <td th:text="${resident.paymentFee}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Restricted</th>
+                <td th:text="${resident.isBlocked}"></td>
+            </tr>
+            <tr>
+                <th scope="row">Resident Type</th>
+                <td th:text="${resident.residentType.type}"></td>
+            </tr>
+            <tr th:each="resFields, iter : ${resident.residentTypeValuesFields}">
+                <th scope="row" th:text="${resident.residentTypeFields.get(iter.index).toString()}"></th>
+                <td th:text="${resFields.value}"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p><a href="/residents" th:href="@{/residents}">Back to list of residents</a></p>
+    </div>
+</div>
+</body>
+</html>
