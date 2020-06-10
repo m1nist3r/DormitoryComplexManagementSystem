@@ -1,42 +1,46 @@
 package com.m1nist3r.dormitory.restful;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.m1nist3r.dormitory.restful.business.domain.resident.Resident;
+import com.m1nist3r.dormitory.restful.business.domain.resident.ResidentModel;
 import com.m1nist3r.dormitory.restful.business.domain.resident.ResidentType;
-import com.m1nist3r.dormitory.restful.business.service.resident.IResidentService;
-import com.m1nist3r.dormitory.restful.util.ResidentNotFoundException;
-import com.m1nist3r.dormitory.restful.web.ResidentController;
+import com.m1nist3r.dormitory.restful.business.domain.room.Room;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.event.annotation.BeforeTestExecution;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 
-import java.net.URI;
-import java.nio.charset.Charset;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Collections;
 
-import static java.nio.charset.StandardCharsets.*;
-import static org.springframework.http.MediaType.ALL;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
-import static org.springframework.http.ResponseEntity.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.web.servlet.support.ServletUriComponentsBuilder.fromCurrentRequest;
 
-@SpringBootTest
 @AutoConfigureMockMvc
+@RunWith(SpringRunner.class)
+@SpringBootTest
 class RestApplicationTests {
-
-    @Autowired
-    private IResidentService residentService;
 
     @Autowired
     private MockMvc mvc;
@@ -44,8 +48,22 @@ class RestApplicationTests {
     @Autowired
     private ObjectMapper objectMapper;
 
+    static String token;
     @Test
-    void contextLoads() {
+    public void settingUpToken() throws Exception {
+        String username = "dodik";
+        String password = "dodik";
+
+        String body = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}";
+
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.post("/auth/login")
+                .contentType(APPLICATION_JSON)
+                .content(body))
+                .andReturn();
+
+        String response = result.getResponse().getContentAsString();
+        response = response.substring(16, response.length() - 4);
+        token = response;
     }
 
 
@@ -61,17 +79,9 @@ class RestApplicationTests {
 
         String body = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}";
 
-        MvcResult result = mvc.perform(MockMvcRequestBuilders.post("/auth/login")
+        mvc.perform(MockMvcRequestBuilders.post("/auth/login")
                 .contentType(APPLICATION_JSON)
                 .content(body))
-                .andExpect(status().isOk()).andReturn();
-
-        String response = result.getResponse().getContentAsString();
-        response = response.substring(16, response.length() - 4);
-        String token = response;
-        System.out.println(token);
-        mvc.perform(MockMvcRequestBuilders.get("/residents")
-                .header("Authorization", "Bearer " + token))
                 .andExpect(status().isOk());
     }
 
@@ -85,34 +95,40 @@ class RestApplicationTests {
         mvc.perform(MockMvcRequestBuilders.post("/auth/login")
                 .contentType(APPLICATION_JSON)
                 .content(body))
-                .andExpect(status().isUnauthorized()).andReturn();
+                .andExpect(status().isUnauthorized());
     }
 
     @Test
-    public void whenPostRequestToCreateResidentAndValidResident_thenCorrectResponse() throws Exception {
-        String username = "dodik";
-        String password = "dodik";
-
-        String body = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}";
-
-        MvcResult result = mvc.perform(MockMvcRequestBuilders.post("/auth/login")
-                .contentType(APPLICATION_JSON)
-                .content(body))
-                .andExpect(status().isOk()).andReturn();
-
-        String response = result.getResponse().getContentAsString();
-        response = response.substring(16, response.length() - 4);
-        String token = response;
-        System.out.println(token);
+    public void whenGetRequestToGetAllResident_thenCorrectResponse() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/api/residents")
                 .header("Authorization", "Bearer " + token))
                 .andExpect(status().isOk());
+    }
 
-        Resident resident = residentService.findOneResident(1L).orElseThrow(() -> new ResidentNotFoundException(1L));
-        resident.setId(2L);
-        resident.setFirstName("");
-        mvc.perform(MockMvcRequestBuilders.post("/api/residents").contentType(ALL)
-                .content(objectMapper.writeValueAsString(resident))
+
+    public void whenPostRequestToCreateResidentAndValidResident_thenCorrectResponse() throws Exception {
+        ResidentModel residentModel = ResidentModel.builder()
+                .firstName("Test First Name")
+                .lastName("Test Last Name")
+                .idNumber("8800553535")
+                .sex("F")
+                .birthDate(LocalDate.of(1996, 4, 29))
+                .mothersName("Test Mother Name")
+                .fathersName("Test Father Name")
+                .email("andriztan1@gmail.com")
+                .country("Ukraine")
+                .address("Test Address Ukraine")
+                .phoneNumber("+48 333 444 999")
+                .accommodationDate(LocalDate.of(2019, 10, 1))
+                .evictionDate(LocalDate.of(2020, 7, 1))
+                .isBlocked(false)
+                .residentType(ResidentType.builder().id(1).build())
+                .room(Room.builder().id(1).build())
+                .postalCode("12345-412")
+                .build();
+
+        mvc.perform(MockMvcRequestBuilders.post("/api/residents").contentType(APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(residentModel))
                 .header("Authorization", "Bearer " + token))
                 .andExpect(status().isCreated());
     }

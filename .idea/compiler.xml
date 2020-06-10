@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="DormitoryWebClientService" />
+        <module name="DormitoryWebApplication" />
+        <module name="DormitoryRESTfulService" />
+        <module name="DormitoryDesktopApplication" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DormitoryDesktopApplication" target="14" />
+      <module name="dormitorymanagementsystem (1) (com.dormitorymanagementsystem.web.app)" target="11" />
+      <module name="DormitoryRESTfulService" target="14" />
+      <module name="DormitoryWebApplication" target="14" />
+      <module name="DormitoryWebClientService" target="14" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DormitoryDesktopApplication" options="-parameters" />
+      <module name="DormitoryRESTfulService" options="-parameters" />
+      <module name="DormitoryWebApplication" options="-parameters" />
+      <module name="DormitoryWebClientService" options="-parameters" />
+      <module name="dormitorymanagementsystem (1) (com.dormitorymanagementsystem.web.app)" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -2,13 +2,21 @@ package com.m1nist3r.dormitory.restful.business.domain.room;
 
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 @Data
 public class RoomModel {
+    @Size(min = 2, max = 26)
+    @NotBlank(message = "Dormitory Name is mandatory")
     private String dormitoryName;
-    private String status;
-    private int capacity;
+    @Size(min = 2, max = 26)
+    @NotBlank(message = "Remarks is mandatory")
     private String remarks;
+    @NotNull(message = "Amount is mandatory")
     private int amount;
+    @NotNull(message = "Room Typpe is mandatory")
     private RoomType roomType;
 
 

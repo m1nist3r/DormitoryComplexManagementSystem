@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -30,9 +31,8 @@ public class Resident implements Serializable {
     private String idNumber;
     @Column(name = "sex", nullable = false)
     private char sex;
-    @Column(name = "date_of_birth", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date birthDate;
+    @Column(name = "date_of_birth", nullable = false, columnDefinition = "DATE")
+    private LocalDate birthDate;
     @Column(name = "mother_name", nullable = false)
     private String mothersName;
     @Column(name = "father_name", nullable = false)
@@ -45,12 +45,10 @@ public class Resident implements Serializable {
     private String address;
     @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
-    @Column(name = "date_of_accommodation", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date accommodationDate;
-    @Column(name = "date_of_eviction", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date evictionDate;
+    @Column(name = "date_of_accommodation", nullable = false, columnDefinition = "DATE")
+    private LocalDate accommodationDate;
+    @Column(name = "date_of_eviction", nullable = false, columnDefinition = "DATE")
+    private LocalDate evictionDate;
     @Column(name = "is_blocked", nullable = false)
     @JsonIgnore
     private boolean isBlocked;

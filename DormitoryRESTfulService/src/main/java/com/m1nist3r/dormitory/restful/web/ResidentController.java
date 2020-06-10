@@ -47,8 +47,8 @@ public class ResidentController {
     @PostMapping
     public ResponseEntity<Resident> saveResident(@Valid @RequestBody ResidentModel residentModel) {
         Resident resident = this.residentService.updateResident(residentModel.translateModelToResident());
-        Room room = roomService.findOneRoom(residentModel.getRoomId()).orElseThrow(() ->
-                new RoomNotFoundException(residentModel.getRoomId()));
+        Room room = roomService.findOneRoom(residentModel.getRoom().getId()).orElseThrow(() ->
+                new RoomNotFoundException(residentModel.getRoom().getId()));
         room.setAmount(room.getAmount() + 1);
         roomService.saveRoom(room);
         URI location = fromCurrentRequest()
@@ -67,9 +67,9 @@ public class ResidentController {
             @PathVariable Long id, @Valid @RequestBody ResidentModel residentModel) {
         Resident exist = this.residentService.findOneResident(id).orElseThrow((() ->
                 new ResidentNotFoundException(id)));
-        if (exist.getRoom().getId() != residentModel.getRoomId()) {
-            Room room = roomService.findOneRoom(residentModel.getRoomId()).orElseThrow(() ->
-                    new RoomNotFoundException(residentModel.getRoomId()));
+        if (exist.getRoom().getId() != residentModel.getRoom().getId()) {
+            Room room = roomService.findOneRoom(residentModel.getRoom().getId()).orElseThrow(() ->
+                    new RoomNotFoundException(residentModel.getRoom().getId()));
             room.setAmount(room.getAmount() - 1);
             roomService.saveRoom(room);
         }

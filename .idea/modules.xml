@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DormitoryDesktopApplication/DormitoryDesktopApplication.iml" filepath="$PROJECT_DIR$/DormitoryDesktopApplication/DormitoryDesktopApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DormitoryRESTfulService/DormitoryRESTfulService.iml" filepath="$PROJECT_DIR$/DormitoryRESTfulService/DormitoryRESTfulService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DormitoryWebApplication/DormitoryWebApplication.iml" filepath="$PROJECT_DIR$/DormitoryWebApplication/DormitoryWebApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DormitoryWebClientService/DormitoryWebClientService.iml" filepath="$PROJECT_DIR$/DormitoryWebClientService/DormitoryWebClientService.iml" />
+    </modules>
+  </component>
+</project>
