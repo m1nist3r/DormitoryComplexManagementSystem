@@ -1,6 +1,7 @@
 package com.m1nist3r.dormitory.web.application.securing.config;
 
 import com.m1nist3r.dormitory.web.application.securing.auth.DormitoryAdministratorDetailsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -19,6 +20,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     private final DormitoryAdministratorDetailsService dormitoryAdministratorDetailsService;
 
+    @Autowired
     public WebSecurityConfiguration(DormitoryAdministratorDetailsService dormitoryAdministratorDetailsService) {
         this.dormitoryAdministratorDetailsService = dormitoryAdministratorDetailsService;
     }

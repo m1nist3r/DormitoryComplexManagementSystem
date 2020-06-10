@@ -13,5 +13,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/dormitory</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="dd7i59uee6i9nj@ec2-54-75-246-118.eu-west-1.compute.amazonaws.com" uuid="d4d5bf9f-26ce-43d7-b4af-f6a2de0ae3bf">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-75-246-118.eu-west-1.compute.amazonaws.com:5432/dd7i59uee6i9nj</jdbc-url>
+    </data-source>
   </component>
 </project>
