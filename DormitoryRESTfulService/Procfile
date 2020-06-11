@@ -1,1 +1,0 @@
-web: java -jar target/dormitory-rest-1.0.0.jar
