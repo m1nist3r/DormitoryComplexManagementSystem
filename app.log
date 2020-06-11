@@ -512,3 +512,505 @@ org.springframework.security.access.AccessDeniedException: Access is denied
 2020-06-11 18:36:24.944  INFO 5968 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-06-11 18:36:24.944  INFO 5968 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-06-11 18:36:24.952  INFO 5968 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-11 18:49:15.063  INFO 14348 --- [main] c.m.d.restful.RestApplicationTests       : Starting RestApplicationTests on Buravskiy-PC with PID 14348 (started by HORROR in C:\Users\HORROR\IdeaProjects\DormitoryRESTDeployment)
+2020-06-11 18:49:15.064  INFO 14348 --- [main] c.m.d.restful.RestApplicationTests       : No active profile set, falling back to default profiles: default
+2020-06-11 18:49:16.436  INFO 14348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-11 18:49:16.528  INFO 14348 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 6 JPA repository interfaces.
+2020-06-11 18:49:17.060  INFO 14348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2baac4a7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-11 18:49:17.075  INFO 14348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-11 18:49:17.284  INFO 14348 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-11 18:49:17.391  INFO 14348 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-11 18:49:17.462  INFO 14348 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-11 18:49:17.628  INFO 14348 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-11 18:49:17.787  INFO 14348 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-11 18:49:18.543  INFO 14348 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-11 18:49:18.559  INFO 14348 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-06-11 18:49:21.722  INFO 14348 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-11 18:49:21.730  INFO 14348 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-11 18:49:22.369 DEBUG 14348 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/']
+2020-06-11 18:49:22.370 DEBUG 14348 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/favicon.ico']
+2020-06-11 18:49:22.372 DEBUG 14348 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/auth/login']
+2020-06-11 18:49:22.372 DEBUG 14348 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_SUPERVISOR')', for Ant [pattern='/api/residents/**', DELETE]
+2020-06-11 18:49:22.374 DEBUG 14348 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'authenticated', for any request
+2020-06-11 18:49:22.383 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2020-06-11 18:49:22.384 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2020-06-11 18:49:22.390  INFO 14348 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d9bd1d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@24de63b, org.springframework.security.web.header.HeaderWriterFilter@733fa95c, org.springframework.security.web.authentication.logout.LogoutFilter@4ae958b0, com.m1nist3r.dormitory.restful.security.jwt.JwtTokenAuthenticationFilter@18ac4af6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9cc0505, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@422ba9b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@117fb9ba, org.springframework.security.web.session.SessionManagementFilter@57a982f9, org.springframework.security.web.access.ExceptionTranslationFilter@5a2035e1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ac1b6c0]
+2020-06-11 18:49:22.416 DEBUG 14348 --- [main] o.s.s.a.i.a.MethodSecurityInterceptor    : Validated configuration attributes
+2020-06-11 18:49:22.462  INFO 14348 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-11 18:49:22.886  INFO 14348 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-11 18:49:23.273  INFO 14348 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-06-11 18:49:23.273  INFO 14348 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-11 18:49:23.289  INFO 14348 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
+2020-06-11 18:49:23.305 DEBUG 14348 --- [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=com.m1nist3r.dormitory.restful.security.configuration.SecurityConfiguration$$EnhancerBySpringCGLIB$$c4d613c@8b670c0}
+2020-06-11 18:49:23.312  INFO 14348 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-11 18:49:23.335  INFO 14348 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-11 18:49:23.369  INFO 14348 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-11 18:49:23.623  INFO 14348 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-11 18:49:23.905  INFO 14348 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-11 18:49:23.915  INFO 14348 --- [main] c.m.d.restful.RestApplicationTests       : Started RestApplicationTests in 9.133 seconds (JVM running for 10.073)
+2020-06-11 18:49:24.164 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-06-11 18:49:24.165 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-06-11 18:49:24.166 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-06-11 18:49:24.169 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-06-11 18:49:24.170 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-06-11 18:49:24.170 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'GET /logout'
+2020-06-11 18:49:24.170 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-06-11 18:49:24.170 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/logout'
+2020-06-11 18:49:24.171 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-06-11 18:49:24.171 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'PUT /logout'
+2020-06-11 18:49:24.171 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-06-11 18:49:24.171 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'DELETE /logout'
+2020-06-11 18:49:24.171 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-06-11 18:49:24.171 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 5 of 11 in additional filter chain; firing Filter: 'JwtTokenAuthenticationFilter'
+2020-06-11 18:49:24.172 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-06-11 18:49:24.172 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-06-11 18:49:24.174 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-06-11 18:49:24.175 DEBUG 14348 --- [main] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@6e5132f9: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2020-06-11 18:49:24.176 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-06-11 18:49:24.176 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-06-11 18:49:24.176 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-06-11 18:49:24.177 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/'
+2020-06-11 18:49:24.177 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/favicon.ico'
+2020-06-11 18:49:24.177 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/auth/login'
+2020-06-11 18:49:24.177 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /auth/login; Attributes: [permitAll]
+2020-06-11 18:49:24.178 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@6e5132f9: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+2020-06-11 18:49:24.183 DEBUG 14348 --- [main] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@78141c58, returned: 1
+2020-06-11 18:49:24.183 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-06-11 18:49:24.184 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-06-11 18:49:24.184 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login reached end of additional filter chain; proceeding with original chain
+2020-06-11 18:49:24.244 DEBUG 14348 --- [main] o.s.s.authentication.ProviderManager     : Authentication attempt using org.springframework.security.authentication.dao.DaoAuthenticationProvider
+2020-06-11 18:49:24.872 DEBUG 14348 --- [main] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@64245ca9
+2020-06-11 18:49:24.873 DEBUG 14348 --- [main] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-06-11 18:49:24.874 DEBUG 14348 --- [main] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-06-11 18:49:24.889 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/api/residents'; against '/logout'
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /api/residents' doesn't match 'POST /logout'
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-06-11 18:49:24.890 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /api/residents' doesn't match 'PUT /logout'
+2020-06-11 18:49:24.891 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-06-11 18:49:24.891 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /api/residents' doesn't match 'DELETE /logout'
+2020-06-11 18:49:24.891 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-06-11 18:49:24.891 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 5 of 11 in additional filter chain; firing Filter: 'JwtTokenAuthenticationFilter'
+2020-06-11 18:49:24.999 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-06-11 18:49:24.999 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-06-11 18:49:24.999 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-06-11 18:49:24.999 DEBUG 14348 --- [main] o.s.s.w.a.AnonymousAuthenticationFilter  : SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@8d631094: Principal: com.m1nist3r.dormitory.restful.security.auth.DormitoryAdministratorPrinciple@6334c0d8; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: Supervisor'
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] s.CompositeSessionAuthenticationStrategy : Delegating to org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy@795faad
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/api/residents'; against '/'
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/api/residents'; against '/favicon.ico'
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/api/residents'; against '/auth/login'
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /api/residents' doesn't match 'DELETE /api/residents/**'
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /api/residents; Attributes: [authenticated]
+2020-06-11 18:49:25.000 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@8d631094: Principal: com.m1nist3r.dormitory.restful.security.auth.DormitoryAdministratorPrinciple@6334c0d8; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: Supervisor
+2020-06-11 18:49:25.001 DEBUG 14348 --- [main] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@78141c58, returned: 1
+2020-06-11 18:49:25.001 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-06-11 18:49:25.001 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-06-11 18:49:25.001 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /api/residents reached end of additional filter chain; proceeding with original chain
+2020-06-11 18:49:25.247 DEBUG 14348 --- [main] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@64245ca9
+2020-06-11 18:49:25.247 DEBUG 14348 --- [main] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-06-11 18:49:25.247 DEBUG 14348 --- [main] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-06-11 18:49:25.253 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-06-11 18:49:25.253 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'GET /logout'
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/logout'
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'PUT /logout'
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'DELETE /logout'
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-06-11 18:49:25.254 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 5 of 11 in additional filter chain; firing Filter: 'JwtTokenAuthenticationFilter'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@6e5132f9: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/favicon.ico'
+2020-06-11 18:49:25.255 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/auth/login'
+2020-06-11 18:49:25.256 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /auth/login; Attributes: [permitAll]
+2020-06-11 18:49:25.256 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@6e5132f9: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+2020-06-11 18:49:25.256 DEBUG 14348 --- [main] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@78141c58, returned: 1
+2020-06-11 18:49:25.256 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-06-11 18:49:25.256 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-06-11 18:49:25.256 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login reached end of additional filter chain; proceeding with original chain
+2020-06-11 18:49:25.257 DEBUG 14348 --- [main] o.s.s.authentication.ProviderManager     : Authentication attempt using org.springframework.security.authentication.dao.DaoAuthenticationProvider
+2020-06-11 18:49:25.434 DEBUG 14348 --- [main] o.s.s.a.dao.DaoAuthenticationProvider    : User 'nondodik' not found
+2020-06-11 18:49:25.438 DEBUG 14348 --- [main] o.s.s.w.a.ExceptionTranslationFilter     : Authentication exception occurred; redirecting to authentication entry point
+
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:151) ~[spring-security-core-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199) ~[spring-security-core-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219) ~[spring-security-core-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:513) ~[spring-security-config-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at com.m1nist3r.dormitory.restful.web.AuthController.login(AuthController.java:42) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at com.m1nist3r.dormitory.restful.security.jwt.JwtTokenAuthenticationFilter.doFilter(JwtTokenAuthenticationFilter.java:34) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at com.m1nist3r.dormitory.restful.RestApplicationTests.nonexistentUserCannotGetToken(RestApplicationTests.java:95) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686) ~[junit-platform-commons-1.6.2.jar:1.6.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:212) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:208) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+
+2020-06-11 18:49:25.439 DEBUG 14348 --- [main] o.s.s.w.a.ExceptionTranslationFilter     : Calling Authentication entry point.
+2020-06-11 18:49:25.440 DEBUG 14348 --- [main] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@64245ca9
+2020-06-11 18:49:25.440 DEBUG 14348 --- [main] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-06-11 18:49:25.445 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-06-11 18:49:25.445 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-06-11 18:49:25.445 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-06-11 18:49:25.445 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-06-11 18:49:25.445 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-06-11 18:49:25.445 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'GET /logout'
+2020-06-11 18:49:25.445 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/logout'
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'PUT /logout'
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'POST /auth/login' doesn't match 'DELETE /logout'
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 5 of 11 in additional filter chain; firing Filter: 'JwtTokenAuthenticationFilter'
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@6e5132f9: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2020-06-11 18:49:25.446 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/'
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/favicon.ico'
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/auth/login'; against '/auth/login'
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /auth/login; Attributes: [permitAll]
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@6e5132f9: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@78141c58, returned: 1
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorization successful
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : RunAsManager did not change Authentication object
+2020-06-11 18:49:25.447 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /auth/login reached end of additional filter chain; proceeding with original chain
+2020-06-11 18:49:25.448 DEBUG 14348 --- [main] o.s.s.authentication.ProviderManager     : Authentication attempt using org.springframework.security.authentication.dao.DaoAuthenticationProvider
+2020-06-11 18:49:25.769 DEBUG 14348 --- [main] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@64245ca9
+2020-06-11 18:49:25.770 DEBUG 14348 --- [main] o.s.s.w.a.ExceptionTranslationFilter     : Chain processed normally
+2020-06-11 18:49:25.770 DEBUG 14348 --- [main] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-06-11 18:49:25.775 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2020-06-11 18:49:25.775 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', GET]
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/residents'; against '/logout'
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', POST]
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /residents' doesn't match 'POST /logout'
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', PUT]
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /residents' doesn't match 'PUT /logout'
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/logout', DELETE]
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /residents' doesn't match 'DELETE /logout'
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 5 of 11 in additional filter chain; firing Filter: 'JwtTokenAuthenticationFilter'
+2020-06-11 18:49:25.776 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2020-06-11 18:49:25.777 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2020-06-11 18:49:25.777 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2020-06-11 18:49:25.777 DEBUG 14348 --- [main] o.s.s.w.a.AnonymousAuthenticationFilter  : Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@6e5132f9: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2020-06-11 18:49:25.777 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2020-06-11 18:49:25.777 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2020-06-11 18:49:25.778 DEBUG 14348 --- [main] o.s.security.web.FilterChainProxy        : /residents at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2020-06-11 18:49:25.778 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/residents'; against '/'
+2020-06-11 18:49:25.778 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/residents'; against '/favicon.ico'
+2020-06-11 18:49:25.778 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/residents'; against '/auth/login'
+2020-06-11 18:49:25.778 DEBUG 14348 --- [main] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /residents' doesn't match 'DELETE /api/residents/**'
+2020-06-11 18:49:25.778 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Secure object: FilterInvocation: URL: /residents; Attributes: [authenticated]
+2020-06-11 18:49:25.778 DEBUG 14348 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@6e5132f9: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+2020-06-11 18:49:25.779 DEBUG 14348 --- [main] o.s.s.access.vote.AffirmativeBased       : Voter: org.springframework.security.web.access.expression.WebExpressionVoter@78141c58, returned: -1
+2020-06-11 18:49:25.781 DEBUG 14348 --- [main] o.s.s.w.a.ExceptionTranslationFilter     : Access is denied (user is anonymous); redirecting to authentication entry point
+
+org.springframework.security.access.AccessDeniedException: Access is denied
+	at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:84) ~[spring-security-core-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:233) ~[spring-security-core-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:123) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at com.m1nist3r.dormitory.restful.security.jwt.JwtTokenAuthenticationFilter.doFilter(JwtTokenAuthenticationFilter.java:34) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.2.RELEASE.jar:5.3.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183) ~[spring-test-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at com.m1nist3r.dormitory.restful.RestApplicationTests.shouldNotAllowAccessToUnauthenticatedUsers(RestApplicationTests.java:72) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686) ~[junit-platform-commons-1.6.2.jar:1.6.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:212) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:208) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71) ~[junit-jupiter-engine-5.6.2.jar:5.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1510) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.6.2.jar:1.6.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
+
+2020-06-11 18:49:25.786 DEBUG 14348 --- [main] o.s.s.w.a.ExceptionTranslationFilter     : Calling Authentication entry point.
+2020-06-11 18:49:25.787 DEBUG 14348 --- [main] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@64245ca9
+2020-06-11 18:49:25.787 DEBUG 14348 --- [main] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2020-06-11 18:49:25.850  INFO 14348 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-11 18:49:25.851  INFO 14348 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-11 18:49:25.852  INFO 14348 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-11 18:49:25.860  INFO 14348 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-11 18:50:04.761  INFO 11684 --- [main] c.m.dormitory.restful.RestApplication    : Starting RestApplication v1.0.0 on Buravskiy-PC with PID 11684 (C:\Users\HORROR\IdeaProjects\DormitoryRESTDeployment\target\dormitory-rest-1.0.0.jar started by HORROR in C:\Users\HORROR\IdeaProjects\DormitoryRESTDeployment)
+2020-06-11 18:50:04.764  INFO 11684 --- [main] c.m.dormitory.restful.RestApplication    : No active profile set, falling back to default profiles: default
+2020-06-11 18:50:06.647  INFO 11684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-11 18:50:06.849  INFO 11684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 181ms. Found 6 JPA repository interfaces.
+2020-06-11 18:50:07.598  INFO 11684 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5674e1f2' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-11 18:50:07.607  INFO 11684 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-11 18:50:08.063  INFO 11684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8100 (http)
+2020-06-11 18:50:08.082  INFO 11684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-11 18:50:08.083  INFO 11684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-11 18:50:08.199  INFO 11684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-11 18:50:08.199  INFO 11684 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3331 ms
+2020-06-11 18:50:08.458  INFO 11684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-11 18:50:08.538  INFO 11684 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-11 18:50:08.686  INFO 11684 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-11 18:50:08.947  INFO 11684 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-11 18:50:09.146  INFO 11684 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-11 18:50:09.885  INFO 11684 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-11 18:50:09.921  INFO 11684 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-06-11 18:50:13.494  INFO 11684 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-11 18:50:13.502  INFO 11684 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-11 18:50:14.371 DEBUG 11684 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/']
+2020-06-11 18:50:14.374 DEBUG 11684 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/favicon.ico']
+2020-06-11 18:50:14.375 DEBUG 11684 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/auth/login']
+2020-06-11 18:50:14.375 DEBUG 11684 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasRole('ROLE_SUPERVISOR')', for Ant [pattern='/api/residents/**', DELETE]
+2020-06-11 18:50:14.377 DEBUG 11684 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'authenticated', for any request
+2020-06-11 18:50:14.396 DEBUG 11684 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2020-06-11 18:50:14.397 DEBUG 11684 --- [main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2020-06-11 18:50:14.401  INFO 11684 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2687f956, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d2d99fc, org.springframework.security.web.header.HeaderWriterFilter@1869f114, org.springframework.security.web.authentication.logout.LogoutFilter@66bfd864, com.m1nist3r.dormitory.restful.security.jwt.JwtTokenAuthenticationFilter@1ded7b14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e3a39cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52a36910, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29be7749, org.springframework.security.web.session.SessionManagementFilter@f9b5552, org.springframework.security.web.access.ExceptionTranslationFilter@47b2e9e1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44afefd5]
+2020-06-11 18:50:14.433 DEBUG 11684 --- [main] o.s.s.a.i.a.MethodSecurityInterceptor    : Validated configuration attributes
+2020-06-11 18:50:14.470  INFO 11684 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-11 18:50:15.202  INFO 11684 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-11 18:50:15.561 DEBUG 11684 --- [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfiguration=com.m1nist3r.dormitory.restful.security.configuration.SecurityConfiguration$$EnhancerBySpringCGLIB$$ac4f28cf@1eba372c}
+2020-06-11 18:50:15.625  INFO 11684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8100 (http) with context path ''
+2020-06-11 18:50:15.627  INFO 11684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-11 18:50:15.678  INFO 11684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-11 18:50:15.803  INFO 11684 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-11 18:50:16.242  INFO 11684 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-11 18:50:16.700  INFO 11684 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-11 18:50:16.719  INFO 11684 --- [main] c.m.dormitory.restful.RestApplication    : Started RestApplication in 12.734 seconds (JVM running for 13.42)
+2020-06-11 18:51:03.633  INFO 11684 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-11 18:51:03.635  INFO 11684 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-11 18:51:03.635  INFO 11684 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-11 18:51:03.644  INFO 11684 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
