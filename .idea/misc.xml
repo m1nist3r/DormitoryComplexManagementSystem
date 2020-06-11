@@ -6,10 +6,7 @@
         <option value="$PROJECT_DIR$/../Dormitory/pom.xml" />
         <option value="$PROJECT_DIR$/../domitoryRestServices/pom.xml" />
         <option value="$PROJECT_DIR$/../dormitorymanagementsystemSpring/pom.xml" />
-        <option value="$PROJECT_DIR$/DormitoryDesktopApplication/pom.xml" />
-        <option value="$PROJECT_DIR$/DormitoryWebApplication/pom.xml" />
         <option value="$PROJECT_DIR$/DormitoryRESTfulService/pom.xml" />
-        <option value="$PROJECT_DIR$/DormitoryWebClientService/pom.xml" />
       </list>
     </option>
   </component>
