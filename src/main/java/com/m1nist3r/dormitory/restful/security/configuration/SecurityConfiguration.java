@@ -89,7 +89,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers(AUTH_WHITELIST).permitAll()
-                .antMatchers(HttpMethod.DELETE, "/api/residents/**").hasRole("SUPERVISOR")
+                .antMatchers(HttpMethod.DELETE).hasRole("SUPERVISOR")
                 .anyRequest().authenticated()
                 .and().exceptionHandling()
                 .authenticationEntryPoint(new JwtAuthenticationEntryPoint())
